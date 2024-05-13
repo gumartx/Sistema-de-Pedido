@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <object data="assets/home.jpg"></object>
+            <div class="header-title">
+                <h1> Menu - Faça A Sua Escolha </h1>
+            </div>
+        </div>
+
+        <div class="menu main-menu">
+            <div>
+                <h2>Prato Principal</h2>
+                <div class="menu-subtitle">Todos os pratos acompanham arroz, feijão e a sobremesa do dia.</div>
+            </div>
+            <div class="menu-content">
+                <div class="food">
+                    <object data="assets/bife.jpg"></object>
+                    <h3>Bife com batata</h3>
+                    <p>R$ 30,00</p>
+                    <div class="quantity">
+                        <button onclick="countQty('-', 1)" class="button">-</button>
+                        <div id="1" class="count">0</div>
+                        <button onclick="countQty('+', 1)" class="button">+</button>
+                    </div>
+                </div>
+                <div class="food">
+                    <object data="assets/coxa.jpg"></object>
+                    <h3>Coxa de Frango Crocante</h3>
+                    <p>R$ 25,00</p>
+                    <div class="quantity">
+                        <button onclick="countQty('-', 2)" class="button">-</button>
+                        <div id="2" class="count">0</div>
+                        <button onclick="countQty('+', 2)" class="button">+</button>
+                    </div>
+                </div>
+                <div class="food">
+                    <object data="assets/panela.jpg"></object>
+                    <h3>Carne de Panela</h3>
+                    <p>R$ 22,00</p>
+                    <div class="quantity">
+                        <button onclick="countQty('-', 3)" class="button">-</button>
+                        <div id="3" class="count">0</div>
+                        <button onclick="countQty('+', 3)" class="button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu side-dish">
+            <div>
+                <h2>Acompanhamentos</h2>
+                <div class="menu-subtitle">Porções para uma pessoa.</div>
+                <div class="menu-content">
+                    <div class="food">
+                        <object data="assets/farofa.jpg"></object>
+                        <h3>Farofa</h3>
+                        <p>R$ 10,00</p>
+                        <div class="quantity">
+                            <button onclick="countQty('-', 4)" class="button">-</button>
+                            <div id="4" class="count">0</div>
+                            <button onclick="countQty('+', 4)" class="button">+</button>
+                        </div>
+                    </div>
+                    <div class="food">
+                        <object data="assets/salad.jpg"></object>
+                        <h3>Salada</h3>
+                        <p>R$ 8,00</p>
+                        <div class="quantity">
+                            <button onclick="countQty('-', 5)" class="button">-</button>
+                            <div id="5" class="count">0</div>
+                            <button onclick="countQty('+', 5)" class="button">+</button>
+                        </div>
+                    </div>
+                    <div class="food">
+                        <object data="assets/torresmo.jpg"></object>
+                        <h3>Torresmo</h3>
+                        <p>R$ 12,00</p>
+                        <div class="quantity">
+                            <button onclick="countQty('-', 6)" class="button">-</button>
+                            <div id="6" class="count">0</div>
+                            <button onclick="countQty('+', 6)" class="button">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu data">
+            <h2>Dados Pessoais</h2>
+            <input id="name" type="text" placeholder="Nome">
+            <input id="telephone" type="text" placeholder="Telefone">
+            <input id="email" type="email" placeholder="Email">
+        </div>
+        <button onclick="viewOrder()" class="calc">Calcular</button>
+        <div id="order">
+
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+    <script src="js/jquery-3.6.0.min.js"> </script>
+    <script src="js/jquery.mask.min.js"> </script>
+
+    <script>
+        $("#telephone").mask("(99) 9999-99999");
+    </script>
+</body>
+
+</html>
